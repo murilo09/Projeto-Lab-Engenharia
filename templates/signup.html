@@ -1,0 +1,70 @@
+{% extends "base.html" %} {% block title %}Signup{% endblock %}{% block content
+%}
+<form method="POST">
+  <br />
+  <h3 align="center">Registre-se</h3>
+  <div class="form-group">
+    <label for="nome">Nome</label>
+    <input
+      type="text"
+      class="form-control"
+      id="nome"
+      name="nome"
+      placeholder="Nome"
+    />
+  </div>
+  <div class="form-group">
+    <label for="sobrenome">Sobrenome</label>
+    <input
+      type="text"
+      class="form-control"
+      id="sobrenome"
+      name="sobrenome"
+      placeholder="Sobrenome"
+    />
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input
+      type="email"
+      class="form-control"
+      id="email"
+      name="email"
+      placeholder="Email"
+    />
+  </div>
+  <div class="form-group">
+    <label for="senha1">Senha</label>
+    <input
+      type="password"
+      class="form-control"
+      id="senha1"
+      name="senha1"
+      placeholder="Senha"
+    />
+  </div>
+  <div class="form-group">
+    <label for="senha2">Confirme sua senha</label>
+    <input
+      type="password"
+      class="form-control"
+      id="senha2"
+      name="senha2"
+      placeholder="Confirme sua senha"
+    />
+  </div>
+  <label for="">Eu sou:</label>
+  <br />
+  <label class="radio-inline">
+    <input type="radio" id="tipo" name="tipo" value="usuario" />
+    Usuário
+  </label>
+  <label class="radio-inline">
+    <input type="radio" id="tipo" name="tipo" value="diarista" />
+    Diarista
+  </label>
+  <br />
+  <br />
+  <button type="submit" class="btn btn-primary">Cadastrar</button>
+</form>
+{% endblock %}
