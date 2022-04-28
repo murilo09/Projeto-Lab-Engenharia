@@ -15,9 +15,13 @@ def create_app():
 
     from .views import views
     from .auth import auth
+    from .configs import configs
+    from .lists import lists
 
     app.register_blueprint(views, url_prefix='/')
     app.register_blueprint(auth, url_prefix='/')
+    app.register_blueprint(configs, url_prefix='/')
+    app.register_blueprint(lists, url_prefix='/')
 
     from .models import User
 
@@ -29,7 +33,7 @@ def create_app():
 
     @login_manager.user_loader
     def load_user(id):
-        return User.query.get(int(id ))
+        return User.query.get(int(id))
 
     return app
 

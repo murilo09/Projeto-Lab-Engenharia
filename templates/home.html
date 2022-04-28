@@ -1,4 +1,10 @@
-{% extends "base.html" %} {% block title %}Home{% endblock %}{% block content
-%}
+{% extends "base.html" %} {% block title %}Home{% endblock %}{% block content 
+  %}
+<br/>
 <h1 align="center">Bem vindo, {{ user.nome }}!</h1>
+<a href="http://127.0.0.1:5000/config">
+  <h3 align="center">
+    <button type="submit" class="btn btn-primary">Configurações</button>
+  </h3>
+</a>
 {% endblock %}
